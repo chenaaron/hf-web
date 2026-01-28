@@ -62,8 +62,8 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <p className="text-gray-400 text-sm">电话</p>
-                <a href="tel:+86-512-6666-6666" className="text-white hover:text-primary transition-colors">
-                  +86-512-6666-6666
+                <a href="tel:+86-18118166255" className="text-white hover:text-primary transition-colors">
+                  +86-18118166255
                 </a>
               </li>
               <li>
@@ -74,7 +74,7 @@ export default function Footer() {
               </li>
               <li>
                 <p className="text-gray-400 text-sm">地址</p>
-                <p className="text-white">苏州市工业园区苏州大道西 9 号</p>
+                <p className="text-white">苏州市吴中区胥口镇子胥路333号1栋</p>
               </li>
             </ul>
           </div>
@@ -84,7 +84,7 @@ export default function Footer() {
         <div className="border-t border-white/10 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
             <p>
-              &copy; 2024 海飞智能. 保留所有权利。
+              &copy; 2026 海飞智能. 保留所有权利。
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-primary transition-colors">隐私政策</a>

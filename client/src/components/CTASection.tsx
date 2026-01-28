@@ -41,9 +41,9 @@ export default function CTASection() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">电话</h3>
               <p className="text-muted-foreground mb-4">
-                +86-512-6666-6666
+                +86-18118166255
               </p>
-              <a href="tel:+86-512-6666-6666" className="text-primary hover:text-primary-dark font-semibold">
+              <a href="tel:+86-18118166255" className="text-primary hover:text-primary-dark font-semibold">
                 立即拨打 →
               </a>
             </div>
@@ -68,8 +68,8 @@ export default function CTASection() {
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">地址</h3>
-              <p className="text-muted-foreground mb-4">
-                苏州市工业园区苏州大道西 9 号
+              <p className="text-muted-foreground">
+                苏州市吴中区胥口镇子胥路333号1栋
               </p>
               <a href="#" className="text-primary hover:text-primary-dark font-semibold">
                 查看地图 →
