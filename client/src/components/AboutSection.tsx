@@ -28,7 +28,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              海飞智能成立于 2009 年，是一家专注于人工智能和智能制造的高新技术企业。经过十多年的不断创新和发展，我们已成为业界领先的智能制造解决方案提供商。
+              海飞智能成立于 2025 年，是一家专注于智能制造的高新技术企业。团队经过十多年的不断创新和发展，我们已成为业界领先的智能制造解决方案提供商。
             </p>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">

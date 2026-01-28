@@ -40,7 +40,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">海飞智能</span>
-              <span className="text-xs text-muted-foreground">Haifei AI</span>
+              <span className="text-xs text-muted-foreground">HF AI</span>
             </div>
           </a>
 
