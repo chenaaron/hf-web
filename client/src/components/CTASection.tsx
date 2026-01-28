@@ -41,9 +41,9 @@ export default function CTASection() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">电话</h3>
               <p className="text-muted-foreground mb-4">
-                +86-18118166255
+                +86-18550585900
               </p>
-              <a href="tel:+86-18118166255" className="text-primary hover:text-primary-dark font-semibold">
+              <a href="tel:+86-18550585900" className="text-primary hover:text-primary-dark font-semibold">
                 立即拨打 →
               </a>
             </div>
@@ -55,9 +55,9 @@ export default function CTASection() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">邮箱</h3>
               <p className="text-muted-foreground mb-4">
-                contact@haifei-ai.com
+                haifei.feng@hf-tssl.com
               </p>
-              <a href="mailto:contact@haifei-ai.com" className="text-primary hover:text-primary-dark font-semibold">
+              <a href="mailto:haifei.feng@hf-tssl.com" className="text-primary hover:text-primary-dark font-semibold">
                 发送邮件 →
               </a>
             </div>

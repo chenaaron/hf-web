@@ -9,6 +9,7 @@ export default function HeroBanner() {
           src="/images/hero-banner.png"
           alt="Hero Banner"
           className="w-full h-full object-cover opacity-70"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent"></div>
       </div>

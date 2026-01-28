@@ -9,9 +9,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">HF</span>
-              </div>
+              <img 
+                src="/images/logo.png" 
+                alt="海飞智能" 
+                className="w-8 h-8 rounded-lg" 
+              />
               <span className="text-lg font-bold">海飞智能</span>
             </div>
             <p className="text-gray-300 mb-6">
@@ -62,14 +64,14 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <p className="text-gray-400 text-sm">电话</p>
-                <a href="tel:+86-18118166255" className="text-white hover:text-primary transition-colors">
-                  +86-18118166255
+                <a href="tel:+86-18550585900" className="text-white hover:text-primary transition-colors">
+                  +86-18550585900
                 </a>
               </li>
               <li>
                 <p className="text-gray-400 text-sm">邮箱</p>
-                <a href="mailto:contact@haifei-ai.com" className="text-white hover:text-primary transition-colors">
-                  contact@haifei-ai.com
+                <a href="mailto:haifei.feng@hf-tssl.com" className="text-white hover:text-primary transition-colors">
+                  haifei.feng@hf-tssl.com
                 </a>
               </li>
               <li>

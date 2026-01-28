@@ -44,7 +44,7 @@ export default function SolutionsCarousel() {
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [autoPlay]);
+  }, [autoPlay, solutions.length]);
 
   const goToPrevious = () => {
     setCurrentIndex((prev) => (prev - 1 + solutions.length) % solutions.length);
@@ -91,6 +91,7 @@ export default function SolutionsCarousel() {
                     src={solution.image}
                     alt={solution.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
 

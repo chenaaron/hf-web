@@ -54,6 +54,7 @@ export default function NewsSection() {
                   src={news.image}
                   alt={news.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  loading="lazy"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 bg-primary text-white rounded-full text-xs font-semibold">

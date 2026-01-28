@@ -10,7 +10,8 @@ export default function Header() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // 使用 passive 事件监听器提升滚动性能
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -35,12 +36,14 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
-              <span className="text-white font-bold text-lg">HF</span>
-            </div>
+            <img 
+              src="/images/logo.png" 
+              alt="海飞智能" 
+              className="w-10 h-10 rounded-lg group-hover:shadow-lg transition-all duration-300" 
+            />
             <div className="flex flex-col">
               <span className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">海飞智能</span>
-              <span className="text-xs text-muted-foreground">HF AI</span>
+              <span className="text-xs text-muted-foreground">科技汇海,飞出精彩</span>
             </div>
           </a>
 
