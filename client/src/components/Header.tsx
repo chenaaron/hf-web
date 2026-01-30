@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +18,12 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { label: '首页', href: '#home' },
-    { label: '关于我们', href: '#about' },
-    { label: '解决方案', href: '#solutions' },
-    { label: '产品服务', href: '#services' },
-    { label: '新闻资讯', href: '#news' },
-    { label: '联系我们', href: '#contact' },
+    { label: t('nav.home'), href: '#home' },
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.solutions'), href: '#solutions' },
+    { label: t('nav.products'), href: '#services' },
+    { label: t('nav.news'), href: '#news' },
+    { label: t('nav.contact'), href: '#contact' },
   ];
 
   return (
@@ -61,10 +63,34 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Language Switcher and CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Language Switcher */}
+            <div className="flex items-center space-x-2 border-l border-border pl-4">
+              <button
+                onClick={() => setLanguage('zh')}
+                className={`px-3 py-1 rounded transition-colors duration-200 font-medium text-sm ${
+                  language === 'zh'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-foreground hover:text-primary'
+                }`}
+              >
+                中文
+              </button>
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-3 py-1 rounded transition-colors duration-200 font-medium text-sm ${
+                  language === 'en'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-foreground hover:text-primary'
+                }`}
+              >
+                English
+              </button>
+            </div>
+            {/* CTA Button */}
             <button className="px-6 py-2 bg-gradient-to-r from-primary to-primary-dark text-primary-foreground rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-sm hover:-translate-y-0.5">
-              获取方案
+              {t('nav.getScheme')}
             </button>
           </div>
 
@@ -94,8 +120,33 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            <div className="mt-4 pt-4 border-t border-border space-y-3">
+              <div className="flex items-center space-x-2">
+                <span className="text-sm font-medium text-foreground">Language:</span>
+                <button
+                  onClick={() => setLanguage('zh')}
+                  className={`px-3 py-1 rounded transition-colors duration-200 font-medium text-sm ${
+                    language === 'zh'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-foreground hover:text-primary'
+                  }`}
+                >
+                  中文
+                </button>
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`px-3 py-1 rounded transition-colors duration-200 font-medium text-sm ${
+                    language === 'en'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-foreground hover:text-primary'
+                  }`}
+                >
+                  English
+                </button>
+              </div>
+            </div>
             <button className="w-full mt-4 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary-dark transition-colors duration-200 font-medium">
-              获取方案
+              {t('nav.getScheme')}
             </button>
           </nav>
         )}

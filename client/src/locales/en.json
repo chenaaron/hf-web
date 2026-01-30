@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "solutions": "Solutions",
+    "products": "Products",
+    "news": "News",
+    "contact": "Contact",
+    "getScheme": "Get Solution"
+  },
+  "hero": {
+    "badge": "🚀 Intelligent Manufacturing Solutions",
+    "title": "Driving the Future of",
+    "titleHighlight": "AI Smart Manufacturing",
+    "description": "Haifei AI is committed to providing advanced artificial intelligence and automation solutions for global manufacturing enterprises, enabling industrial upgrading and driving digital transformation.",
+    "ctaPrimary": "Consult Now",
+    "ctaSecondary": "Learn More",
+    "stats": {
+      "cases": "Success Cases",
+      "experience": "Years of Experience",
+      "team": "Professional Team"
+    }
+  },
+  "advantages": {
+    "title": "Why Choose Haifei AI",
+    "subtitle": "We provide industry-leading intelligent manufacturing solutions to help enterprises achieve digital transformation and efficiency improvement",
+    "items": [
+      {
+        "title": "Core of Smart Manufacturing",
+        "description": "Automation supports many different industries. Haifei AI is committed to high-end automation equipment and intelligent manufacturing solutions."
+      },
+      {
+        "title": "Advanced Technology",
+        "description": "We integrate AI and manufacturing cloud systems from individual machines to specific functions to complete production lines, providing comprehensive solutions."
+      },
+      {
+        "title": "International Team",
+        "description": "International R&D and service teams are the strong backing of Haifei AI, providing professional support to global customers."
+      },
+      {
+        "title": "Quality Service",
+        "description": "We have service teams in different countries to provide comprehensive technical support and solutions to customers in a timely manner."
+      }
+    ]
+  },
+  "solutions": {
+    "title": "Core Solutions",
+    "subtitle": "Professional intelligent manufacturing solutions covering multiple industries",
+    "items": [
+      {
+        "icon": "📱",
+        "title": "Consumer Electronics",
+        "description": "Precision automation and quality inspection solutions for consumer electronics manufacturers"
+      },
+      {
+        "icon": "🚗",
+        "title": "Automotive Industry",
+        "description": "Precision machining and assembly automation systems for automotive parts"
+      },
+      {
+        "icon": "🏭",
+        "title": "Smart Factory",
+        "description": "Complete Industry 4.0 smart factory solutions"
+      },
+      {
+        "icon": "📊",
+        "title": "Data Analytics",
+        "description": "Real-time production data monitoring and intelligent analysis platform"
+      }
+    ],
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "Leading Smart Manufacturing",
+    "titleHighlight": "Innovating the Future",
+    "description1": "Founded in 2020, Haifei AI is a high-tech enterprise focused on intelligent manufacturing. Through more than a decade of continuous innovation and development, we have become an industry-leading intelligent manufacturing solution provider.",
+    "description2": "We are committed to providing global manufacturing enterprises with advanced automation equipment, high-precision detection systems, industrial vision systems, and human-machine interaction systems. From consumer electronics to automotive industry to smart factories, our solutions have been successfully applied in multiple industry fields.",
+    "stats": {
+      "experience": "Years of Experience",
+      "cases": "Success Cases",
+      "team": "Professional Team"
+    },
+    "learnMore": "Learn More"
+  },
+  "news": {
+    "title": "News & Updates",
+    "subtitle": "Learn about the latest news and industry information from Haifei AI",
+    "viewAll": "View All News",
+    "readMore": "Read More",
+    "items": [
+      {
+        "category": "Company News",
+        "date": "2025/12/15",
+        "title": "Haifei AI Wins 2025 Best Innovation Enterprise Award",
+        "description": "At the 15th China Manufacturing Conference, Haifei AI received the Best Innovation Enterprise Award for its innovative achievements in the field of intelligent manufacturing."
+      },
+      {
+        "category": "Industry News",
+        "date": "2025/12/10",
+        "title": "Industry 4.0 Era: How AI Empowers Manufacturing",
+        "description": "In the rapidly changing manufacturing industry, artificial intelligence is becoming a key factor for enterprises to improve competitiveness. This article explores the application of AI in manufacturing."
+      },
+      {
+        "category": "Exhibition",
+        "date": "2025/12/05",
+        "title": "Haifei AI Showcases at 2025 Asia Manufacturing Technology Expo",
+        "description": "Haifei AI showcased its latest intelligent manufacturing solutions at the exhibition, attracting attention from many industry experts and customers."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Start Your Digital Transformation Journey?",
+    "subtitle": "Contact our professional team to get customized intelligent manufacturing solutions",
+    "button": "Consult Now",
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "We are always ready to serve you. Feel free to contact us through the following methods",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "callNow": "Call Now →",
+      "sendEmail": "Send Email →",
+      "viewMap": "View Map →"
+    },
+    "form": {
+      "title": "Send Message",
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "tagline": "Committed to providing advanced artificial intelligence and automation solutions for global manufacturing enterprises, enabling industrial upgrading and driving digital transformation.",
+    "quickLinks": "Quick Links",
+    "solutions": "Solutions",
+    "products": "Products",
+    "news": "News",
+    "contact": "Contact",
+    "solutions_items": [
+      "Consumer Electronics",
+      "Automotive Industry",
+      "Smart Factory",
+      "Data Analytics"
+    ],
+    "products_items": [
+      "Automation Equipment",
+      "Detection Systems",
+      "Vision Systems",
+      "Interaction Systems"
+    ],
+    "news_items": [
+      "Company News",
+      "Industry News",
+      "News Updates",
+      "Contact Us"
+    ],
+    "contact_info": {
+      "title": "Contact Information",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address"
+    },
+    "copyright": "© 2026 Haifei AI. All rights reserved.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "sitemap": "Sitemap"
+    }
+  }
+}
