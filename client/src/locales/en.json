@@ -111,17 +111,17 @@
   "cta": {
     "title": "Ready to Start Your Digital Transformation Journey?",
     "subtitle": "Contact our professional team to get customized intelligent manufacturing solutions",
-    "button": "Consult Now",
-    "contact": {
-      "title": "Contact Us",
-      "subtitle": "We are always ready to serve you. Feel free to contact us through the following methods",
-      "phone": "Phone",
-      "email": "Email",
-      "address": "Address",
-      "callNow": "Call Now →",
-      "sendEmail": "Send Email →",
-      "viewMap": "View Map →"
-    },
+    "button": "Consult Now"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are always ready to serve you. Feel free to contact us through the following methods",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "callNow": "Call Now →",
+    "sendEmail": "Send Email →",
+    "viewMap": "View Map →",
     "form": {
       "title": "Send Message",
       "name": "Your Name",
@@ -132,41 +132,21 @@
     }
   },
   "footer": {
-    "tagline": "Committed to providing advanced artificial intelligence and automation solutions for global manufacturing enterprises, enabling industrial upgrading and driving digital transformation.",
-    "quickLinks": "Quick Links",
-    "solutions": "Solutions",
-    "products": "Products",
-    "news": "News",
-    "contact": "Contact",
-    "solutions_items": [
-      "Consumer Electronics",
-      "Automotive Industry",
-      "Smart Factory",
-      "Data Analytics"
-    ],
-    "products_items": [
-      "Automation Equipment",
-      "Detection Systems",
-      "Vision Systems",
-      "Interaction Systems"
-    ],
-    "news_items": [
-      "Company News",
-      "Industry News",
-      "News Updates",
-      "Contact Us"
-    ],
-    "contact_info": {
-      "title": "Contact Information",
-      "phone": "Phone",
-      "email": "Email",
-      "address": "Address"
+    "company": {
+      "description": "Committed to providing advanced artificial intelligence and automation solutions for global manufacturing enterprises."
     },
-    "copyright": "© 2026 Haifei AI. All rights reserved.",
-    "links": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "sitemap": "Sitemap"
-    }
+    "quickLinks": {
+      "title": "Quick Links"
+    },
+    "solutions": {
+      "title": "Solutions"
+    },
+    "contact": {
+      "title": "Contact Information"
+    },
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "sitemap": "Sitemap"
   }
 }

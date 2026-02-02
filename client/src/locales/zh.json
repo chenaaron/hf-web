@@ -111,17 +111,17 @@
   "cta": {
     "title": "准备好开始您的数字化转型之旅了吗？",
     "subtitle": "联系我们的专业团队，获取定制化的智能制造解决方案",
-    "button": "立即咨询",
-    "contact": {
-      "title": "联系我们",
-      "subtitle": "我们随时准备为您服务，欢迎通过以下方式与我们联系",
-      "phone": "电话",
-      "email": "邮箱",
-      "address": "地址",
-      "callNow": "立即拨打 →",
-      "sendEmail": "发送邮件 →",
-      "viewMap": "查看地图 →"
-    },
+    "button": "立即咨询"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "我们随时准备为您服务，欢迎通过以下方式与我们联系",
+    "phone": "电话",
+    "email": "邮箱",
+    "address": "地址",
+    "callNow": "立即拨打 →",
+    "sendEmail": "发送邮件 →",
+    "viewMap": "查看地图 →",
     "form": {
       "title": "发送消息",
       "name": "您的名字",
@@ -132,41 +132,21 @@
     }
   },
   "footer": {
-    "tagline": "致力于为全球制造企业提供先进的人工智能和自动化解决方案，赋能产业升级，驱动数字化转型。",
-    "quickLinks": "快速链接",
-    "solutions": "解决方案",
-    "products": "产品服务",
-    "news": "新闻资讯",
-    "contact": "联系我们",
-    "solutions_items": [
-      "消费电子",
-      "汽车产业",
-      "智能工厂",
-      "数据分析"
-    ],
-    "products_items": [
-      "自动化设备",
-      "检测系统",
-      "视觉系统",
-      "交互系统"
-    ],
-    "news_items": [
-      "公司动态",
-      "行业资讯",
-      "新闻资讯",
-      "联系我们"
-    ],
-    "contact_info": {
-      "title": "联系信息",
-      "phone": "电话",
-      "email": "邮箱",
-      "address": "地址"
+    "company": {
+      "description": "致力于为全球制造企业提供先进的人工智能和自动化解决方案。"
     },
-    "copyright": "© 2026 海飞智能. 保留所有权利。",
-    "links": {
-      "privacy": "隐私政策",
-      "terms": "服务条款",
-      "sitemap": "网站地图"
-    }
+    "quickLinks": {
+      "title": "快速链接"
+    },
+    "solutions": {
+      "title": "解决方案"
+    },
+    "contact": {
+      "title": "联系信息"
+    },
+    "copyright": "保留所有权利。",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "sitemap": "网站地图"
   }
 }

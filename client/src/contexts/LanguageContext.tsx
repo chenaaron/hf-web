@@ -7,7 +7,7 @@ type Language = 'zh' | 'en';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string, defaultValue?: string) => string;
+  t: (key: string, defaultValue?: any) => any;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -24,7 +24,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     return saved || 'zh';
   });
 
-  const t = (key: string, defaultValue: string = key): string => {
+  const t = (key: string, defaultValue?: any): any => {
     const keys = key.split('.');
     let value: any = translations[language];
 
@@ -32,11 +32,11 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
       } else {
-        return defaultValue;
+        return defaultValue !== undefined ? defaultValue : key;
       }
     }
 
-    return typeof value === 'string' ? value : defaultValue;
+    return value !== undefined ? value : (defaultValue !== undefined ? defaultValue : key);
   };
 
   const handleSetLanguage = (lang: Language) => {

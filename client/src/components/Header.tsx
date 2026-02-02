@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +18,12 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { label: '首页', href: '#home' },
-    { label: '关于我们', href: '#about' },
-    { label: '解决方案', href: '#solutions' },
-    { label: '产品服务', href: '#services' },
-    { label: '新闻资讯', href: '#news' },
-    { label: '联系我们', href: '#contact' },
+    { label: t('nav.home'), href: '#home' },
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.solutions'), href: '#solutions' },
+    { label: t('nav.products'), href: '#services' },
+    { label: t('nav.news'), href: '#news' },
+    { label: t('nav.contact'), href: '#contact' },
   ];
 
   return (
@@ -61,10 +63,33 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Language Switcher and CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-center space-x-1 text-sm">
+              <button
+                onClick={() => setLanguage('zh')}
+                className={`px-2 py-1 transition-colors duration-200 ${
+                  language === 'zh'
+                    ? 'text-primary font-semibold'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                中文
+              </button>
+              <span className="text-muted-foreground">|</span>
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-2 py-1 transition-colors duration-200 ${
+                  language === 'en'
+                    ? 'text-primary font-semibold'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                English
+              </button>
+            </div>
             <button className="px-6 py-2 bg-gradient-to-r from-primary to-primary-dark text-primary-foreground rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-sm hover:-translate-y-0.5">
-              获取方案
+              {t('nav.getScheme')}
             </button>
           </div>
 
@@ -94,8 +119,31 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            <div className="flex items-center space-x-1 text-sm py-2">
+              <button
+                onClick={() => setLanguage('zh')}
+                className={`px-2 py-1 transition-colors duration-200 ${
+                  language === 'zh'
+                    ? 'text-primary font-semibold'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                中文
+              </button>
+              <span className="text-muted-foreground">|</span>
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-2 py-1 transition-colors duration-200 ${
+                  language === 'en'
+                    ? 'text-primary font-semibold'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                English
+              </button>
+            </div>
             <button className="w-full mt-4 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary-dark transition-colors duration-200 font-medium">
-              获取方案
+              {t('nav.getScheme')}
             </button>
           </nav>
         )}
