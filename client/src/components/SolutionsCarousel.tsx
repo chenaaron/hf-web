@@ -1,27 +1,50 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+
+const solutions = [
+  {
+    id: 1,
+    title: '消费电子',
+    description: '为消费电子制造企业提供精密自动化和质量检测解决方案',
+    image: '/images/ai-technology.png',
+    icon: '📱',
+  },
+  {
+    id: 2,
+    title: '汽车产业',
+    description: '汽车零部件精密加工和装配自动化系统',
+    image: '/images/smart-manufacturing.png',
+    icon: '🚗',
+  },
+  {
+    id: 3,
+    title: '智能工厂',
+    description: '完整的工业 4.0 智能工厂解决方案',
+    image: '/images/team-collaboration.png',
+    icon: '🏭',
+  },
+  {
+    id: 4,
+    title: '数据分析',
+    description: '生产数据实时监测和智能分析平台',
+    image: '/images/data-analytics.png',
+    icon: '📊',
+  },
+];
 
 export default function SolutionsCarousel() {
-  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
 
-  const solutions = t('solutions.items');
-
   useEffect(() => {
-    if (!autoPlay || !Array.isArray(solutions)) return;
+    if (!autoPlay) return;
 
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % solutions.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [autoPlay, solutions]);
-
-  if (!Array.isArray(solutions)) {
-    return null;
-  }
+  }, [autoPlay, solutions.length]);
 
   const goToPrevious = () => {
     setCurrentIndex((prev) => (prev - 1 + solutions.length) % solutions.length);
@@ -33,167 +56,118 @@ export default function SolutionsCarousel() {
     setAutoPlay(false);
   };
 
-  const currentSolution = solutions[currentIndex];
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    setAutoPlay(false);
+  };
 
   return (
-    <section id="solutions" className="py-20 bg-gradient-to-b from-white to-primary-light/20">
+    <section id="solutions" className="py-20 bg-gradient-to-br from-primary-light via-white to-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            {t('solutions.title')}
+            核心解决方案
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t('solutions.subtitle')}
+            涵盖多个行业领域的专业智能制造解决方案
           </p>
         </div>
 
-        {/* Solutions Grid - Desktop */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {solutions.map((solution, index) => (
-            <div
-              key={index}
-              className="group p-6 bg-white rounded-xl border border-border hover:shadow-lg hover:border-primary transition-all duration-300 cursor-pointer hover:-translate-y-1"
-              onClick={() => {
-                setCurrentIndex(index);
-                setAutoPlay(false);
-              }}
-            >
-              <div className="text-4xl mb-4">{solution.icon}</div>
-              <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                {solution.title}
-              </h3>
-              <p className="text-muted-foreground text-sm">
-                {solution.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Solutions Carousel - Mobile */}
-        <div className="md:hidden">
-          <div className="relative bg-white rounded-xl border border-border overflow-hidden">
-            {/* Image */}
-            <div className="relative h-64 bg-gradient-to-br from-primary-light to-primary-light/50">
-              <img
-                src={currentSolution.image}
-                alt={currentSolution.title}
-                className="w-full h-full object-cover opacity-70"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-            </div>
-
-            {/* Content */}
-            <div className="p-6">
-              <div className="text-4xl mb-4">{currentSolution.icon}</div>
-              <h3 className="text-2xl font-bold text-foreground mb-3">
-                {currentSolution.title}
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                {currentSolution.description}
-              </p>
-
-              {/* Navigation */}
-              <div className="flex items-center justify-between">
-                <button
-                  onClick={goToPrevious}
-                  className="p-2 bg-primary-light text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+        {/* Carousel Container */}
+        <div className="relative">
+          {/* Main Carousel */}
+          <div className="relative overflow-hidden rounded-2xl shadow-xl">
+            <div className="relative h-96 md:h-[500px]">
+              {solutions.map((solution, index) => (
+                <div
+                  key={solution.id}
+                  className={`absolute inset-0 transition-opacity duration-500 ${
+                    index === currentIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
                 >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
+                  {/* Background Image */}
+                  <img
+                    src={solution.image}
+                    alt={solution.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
 
-                <div className="flex gap-2">
-                  {solutions.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => {
-                        setCurrentIndex(index);
-                        setAutoPlay(false);
-                      }}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentIndex ? 'bg-primary w-8' : 'bg-border'
-                      }`}
-                    />
-                  ))}
+                  {/* Content */}
+                  <div className="absolute inset-0 flex items-center">
+                    <div className="container mx-auto px-4 md:px-8">
+                      <div className="max-w-lg">
+                        <div className="text-5xl mb-4">{solution.icon}</div>
+                        <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                          {solution.title}
+                        </h3>
+                        <p className="text-lg text-gray-200 mb-8">
+                          {solution.description}
+                        </p>
+                        <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary-dark transition-colors duration-300 font-semibold">
+                          了解详情
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
-                <button
-                  onClick={goToNext}
-                  className="p-2 bg-primary-light text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Desktop Carousel */}
-        <div className="hidden md:block relative">
-          <div className="relative bg-white rounded-xl border border-border overflow-hidden">
-            {/* Image */}
-            <div className="relative h-96 bg-gradient-to-br from-primary-light to-primary-light/50">
-              <img
-                src={currentSolution.image}
-                alt={currentSolution.title}
-                className="w-full h-full object-cover opacity-70"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
-            </div>
-
-            {/* Content Overlay */}
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-1/2 p-12 text-white">
-                <div className="text-6xl mb-6">{currentSolution.icon}</div>
-                <h3 className="text-4xl font-bold mb-4">
-                  {currentSolution.title}
-                </h3>
-                <p className="text-lg opacity-90">
-                  {currentSolution.description}
-                </p>
-              </div>
+              ))}
             </div>
 
             {/* Navigation Buttons */}
             <button
               onClick={goToPrevious}
-              className="absolute left-6 top-1/2 -translate-y-1/2 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full transition-all backdrop-blur-sm"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-lg"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-6 h-6 text-foreground" />
             </button>
-
             <button
               onClick={goToNext}
-              className="absolute right-6 top-1/2 -translate-y-1/2 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full transition-all backdrop-blur-sm"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/80 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-lg"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-6 h-6 text-foreground" />
             </button>
+          </div>
 
-            {/* Indicators */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
-              {solutions.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setCurrentIndex(index);
-                    setAutoPlay(false);
-                  }}
-                  className={`transition-all ${
-                    index === currentIndex
-                      ? 'w-8 h-2 bg-white rounded-full'
-                      : 'w-2 h-2 bg-white/50 rounded-full hover:bg-white/75'
-                  }`}
-                />
-              ))}
-            </div>
+          {/* Indicators */}
+          <div className="flex justify-center gap-3 mt-8">
+            {solutions.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`transition-all duration-300 rounded-full ${
+                  index === currentIndex
+                    ? 'w-8 h-3 bg-primary'
+                    : 'w-3 h-3 bg-border hover:bg-muted'
+                }`}
+              />
+            ))}
           </div>
         </div>
 
-        {/* Learn More Button */}
-        <div className="text-center mt-12">
-          <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary-dark transition-all duration-300 font-semibold">
-            {t('solutions.learnMore')}
-          </button>
+        {/* Solution Cards */}
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {solutions.map((solution, index) => (
+            <div
+              key={solution.id}
+              onClick={() => goToSlide(index)}
+              className={`p-6 rounded-lg cursor-pointer transition-all duration-300 ${
+                index === currentIndex
+                  ? 'bg-primary text-white shadow-lg'
+                  : 'bg-white border border-border hover:shadow-md'
+              }`}
+            >
+              <div className="text-3xl mb-3">{solution.icon}</div>
+              <h4 className={`font-bold text-lg mb-2 ${index === currentIndex ? 'text-white' : 'text-foreground'}`}>
+                {solution.title}
+              </h4>
+              <p className={`text-sm ${index === currentIndex ? 'text-white/90' : 'text-muted-foreground'}`}>
+                {solution.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
