@@ -1,8 +1,66 @@
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState } from 'react';
 
 export default function CTASection() {
   const { t } = useLanguage();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    title: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('http://117.50.46.168:83/api/v1/clues', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          title: formData.title,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setSubmitMessage(t('Send message success!') || 'Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          title: '',
+          message: ''
+        });
+        setTimeout(() => {
+          setSubmitMessage('');
+        }, 1500);
+      } else {
+        setSubmitMessage(t('contact.form.error') || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setSubmitMessage(t('contact.form.error') || 'Failed to send message. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
@@ -83,34 +141,60 @@ export default function CTASection() {
           {/* Contact Form */}
           <div className="max-w-2xl mx-auto bg-gradient-to-br from-primary-light to-white rounded-xl border border-border p-8">
             <h3 className="text-2xl font-bold text-foreground mb-6">{t('contact.form.title')}</h3>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   placeholder={t('contact.form.name')}
                   className="px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white"
+                  required
                 />
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder={t('contact.form.email')}
                   className="px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white"
+                  required
                 />
               </div>
               <input
                 type="text"
+                name="title"
+                value={formData.title}
+                onChange={handleInputChange}
                 placeholder={t('contact.form.subject')}
                 className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white"
+                required
               />
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
                 placeholder={t('contact.form.message')}
                 rows={5}
                 className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white resize-none"
+                required
               ></textarea>
+              {submitMessage && (
+                <div className={`px-4 py-3 rounded-lg text-center font-semibold ${
+                  submitMessage.includes('successfully') 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-red-100 text-red-800'
+                }`}>
+                  {submitMessage}
+                </div>
+              )}
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300 font-semibold"
+                disabled={isLoading}
+                className="w-full px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t('contact.form.submit')}
+                {isLoading ? (t('contact.form.sending') || 'Sending...') : t('contact.form.submit')}
               </button>
             </form>
           </div>
