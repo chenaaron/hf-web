@@ -96,19 +96,22 @@
         "category": "公司动态",
         "date": "2025/12/15",
         "title": "海飞智能荣获 2025 年度最佳创新企业奖",
-        "description": "在第十五届中国制造业大会上，海飞智能因其在智能制造领域的创新成就荣获最佳创新企业奖。"
+        "description": "在第十五届中国制造业大会上，海飞智能因其在智能制造领域的创新成就荣获最佳创新企业奖。",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/news-innovation-award-UvEjgAHKUUwvaLCD6iHCGq.webp"
       },
       {
         "category": "行业资讯",
         "date": "2025/12/10",
         "title": "工业 4.0 时代，AI 如何赋能制造业",
-        "description": "在快速变化的制造业中，人工智能正在成为企业提升竞争力的关键因素。本文探讨了 AI 在制造业的应用。"
+        "description": "在快速变化的制造业中，人工智能正在成为企业提升竞争力的关键因素。本文探讨了 AI 在制造业的应用。",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/news-ai-manufacturing-VHQji8fPfb2PTxs3jVyxz8.webp"
       },
       {
         "category": "展会信息",
         "date": "2025/12/05",
         "title": "海飞智能亮相 2025 年亚洲制造技术展",
-        "description": "海飞智能在展会上展示了最新的智能制造解决方案，吸引了众多行业专家和客户的关注。"
+        "description": "海飞智能在展会上展示了最新的智能制造解决方案，吸引了众多行业专家和客户的关注。",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/news-tech-expo-hLmXNusGWqiKfP2Dk3RYsw.webp"
       }
     ]
   },
