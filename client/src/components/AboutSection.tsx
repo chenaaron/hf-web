@@ -11,7 +11,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-light rounded-2xl transform -rotate-3"></div>
             <img
-              src="/images/team-collaboration.png"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/team-collaboration_ff521bad.png"
               alt="About Haifei AI"
               className="relative rounded-2xl shadow-xl w-full h-auto"
               loading="lazy"

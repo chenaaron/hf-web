@@ -9,7 +9,7 @@ export default function HeroBanner() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-banner.png"
+          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/hero-banner_f8a3cb5b.png"
           alt="Hero Banner"
           className="w-full h-full object-cover opacity-70"
           loading="lazy"

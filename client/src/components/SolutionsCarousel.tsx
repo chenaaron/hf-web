@@ -63,7 +63,7 @@ export default function SolutionsCarousel() {
                 >
                   {/* Background Image */}
                   <img
-                    src={solution.image || '/images/ai-technology.png'}
+                    src={solution.image || 'https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/ai-technology_63aa04cc.png'}
                     alt={solution.title}
                     className="w-full h-full object-cover"
                     loading="lazy"

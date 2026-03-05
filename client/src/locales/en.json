@@ -58,9 +58,9 @@
         "description": "Precision machining and assembly automation systems for automotive parts"
       },
       {
-        "icon": "🏭",
-        "title": "Smart Factory",
-        "description": "Complete Industry 4.0 smart factory solutions"
+        "icon": "💻",
+        "title": "Semiconductor Industry",
+        "description": "Advanced semiconductor manufacturing and testing automation solutions"
       },
       {
         "icon": "📊",
@@ -74,7 +74,7 @@
     "title": "Leading Smart Manufacturing",
     "titleHighlight": "Innovating the Future",
     "description1": "Founded in 2020, Haifei AI is a high-tech enterprise focused on intelligent manufacturing. Through more than a decade of continuous innovation and development, we have become an industry-leading intelligent manufacturing solution provider.",
-    "description2": "We are committed to providing global manufacturing enterprises with advanced automation equipment, high-precision detection systems, industrial vision systems, and human-machine interaction systems. From consumer electronics to automotive industry to smart factories, our solutions have been successfully applied in multiple industry fields.",
+    "description2": "We are committed to providing global manufacturing enterprises with advanced automation equipment, high-precision detection systems, industrial vision systems, and human-machine interaction systems. From consumer electronics to automotive industry to semiconductor industry, our solutions have been successfully applied in multiple industry fields.",
     "stats": {
       "experience": "Years of Experience",
       "cases": "Success Cases",

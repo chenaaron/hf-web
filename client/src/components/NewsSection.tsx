@@ -28,7 +28,7 @@ export default function NewsSection() {
               {/* Image */}
               <div className="relative overflow-hidden h-48">
                 <img
-                  src="/images/ai-technology.png"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/ai-technology_63aa04cc.png"
                   alt={news.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
