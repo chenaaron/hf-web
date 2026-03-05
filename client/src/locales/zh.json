@@ -50,22 +50,26 @@
       {
         "icon": "📱",
         "title": "消费电子",
-        "description": "为消费电子制造企业提供精密自动化和质量检测解决方案"
+        "description": "为消费电子制造企业提供精密自动化和质量检测解决方案",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/ai-technology_63aa04cc.png"
       },
       {
         "icon": "🚗",
         "title": "汽车产业",
-        "description": "汽车零部件精密加工和装配自动化系统"
+        "description": "汽车零部件精密加工和装配自动化系统",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/smart-manufacturing_80bd00f9.png"
       },
       {
         "icon": "💻",
         "title": "半导体产业",
-        "description": "先进的半导体制造和测试自动化解决方案"
+        "description": "先进的半导体制造和测试自动化解决方案",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/semiconductor-wafer-XmDjodAPRxjLuPo9xX7joV.webp"
       },
       {
         "icon": "📊",
         "title": "数据分析",
-        "description": "生产数据实时监测和智能分析平台"
+        "description": "生产数据实时监测和智能分析平台",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/data-analytics.png"
       }
     ],
     "learnMore": "了解详情"

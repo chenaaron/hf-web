@@ -50,22 +50,26 @@
       {
         "icon": "📱",
         "title": "Consumer Electronics",
-        "description": "Precision automation and quality inspection solutions for consumer electronics manufacturers"
+        "description": "Precision automation and quality inspection solutions for consumer electronics manufacturers",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/ai-technology_63aa04cc.png"
       },
       {
         "icon": "🚗",
         "title": "Automotive Industry",
-        "description": "Precision machining and assembly automation systems for automotive parts"
+        "description": "Precision machining and assembly automation systems for automotive parts",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/smart-manufacturing_80bd00f9.png"
       },
       {
         "icon": "💻",
         "title": "Semiconductor Industry",
-        "description": "Advanced semiconductor manufacturing and testing automation solutions"
+        "description": "Advanced semiconductor manufacturing and testing automation solutions",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/semiconductor-wafer-XmDjodAPRxjLuPo9xX7joV.webp"
       },
       {
         "icon": "📊",
         "title": "Data Analytics",
-        "description": "Real-time production data monitoring and intelligent analysis platform"
+        "description": "Real-time production data monitoring and intelligent analysis platform",
+        "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663288405553/2WoodetfSwySuzDozu7pYo/data-analytics.png"
       }
     ],
     "learnMore": "Learn More"
